@@ -7,9 +7,13 @@
 	background-color: beige;
 }*/
 
-legend > h2 {
+.tutorial-header {
+  text-align: left;
+  border-bottom: 3px #eee solid;
+}
+
+.tutorial-header > h2 {
 	color: 1C5F75;
-	text-align:left;
 	font-size:40px;
 	font-weight: 900;
 	margin: 25px 0px 0px 25px;
@@ -18,8 +22,7 @@ legend > h2 {
 
 }
 
-legend > p {
-  text-align: left;
+.tutorial-header > p {
 	margin: 0 auto;
 	font-weight: 200;
 	padding-bottom: 30;

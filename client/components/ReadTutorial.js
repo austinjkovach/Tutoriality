@@ -29,8 +29,8 @@ Read.controller = function () {
 
 Read.view = function (ctrl, options) {
     // var id = 0;
-    var view =  m('.read', [
-                  m('legend', [
+    var view =  m('.content-read.col-md-6.col-md-offset-3.col-sm-12', [
+                  m('.tutorial-header', [
                   m('h2', ctrl.tutorial.title),
                   m('p', ctrl.tutorial.description),
                   m('.auth-edit', [
@@ -55,7 +55,7 @@ Read.view = function (ctrl, options) {
                               // ]),
                             // ]),
                           // m('.panel-collapse', { 'aria-labelledby': 'heading' + id, id: 'collapse' + id, role: 'tabpanel' }, [
-                            m('.panel-body', [
+                            m('.step-container', [
                               m('p', m.component(MarkDownText, list.content))
                             ])
                           ])
