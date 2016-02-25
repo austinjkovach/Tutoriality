@@ -11,15 +11,17 @@
 }
 
 .panel-title.list-link {
-  cursor: pointer;
+  /*cursor: pointer;*/
   text-decoration: underline;
   color: #317eac;
+  /*color: #eee;*/
 }
 
 /* Specific styles for the list view page */
 .listView h1 {
   text-align: left;
   margin: 25px 10px;
+  /*margin: 0 auto;*/
   font-weight: 200;
   font-size: 28px;
   letter-spacing: 1px;

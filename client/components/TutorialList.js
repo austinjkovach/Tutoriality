@@ -22,7 +22,7 @@ List.controller = function () {
 };
 
 List.view = function (ctrl, options) {
-  var view = m('div.listView', [
+  var view = m('.listView.col-md-6.col-offset-3.col-sm-12', [
 
     m('div.page-header', [
       m('h1', 'Tutorial List')
@@ -32,10 +32,7 @@ List.view = function (ctrl, options) {
       ctrl.tutorials.map(function(tutorial) {
         return m('div.panel.panel-default', [
           m('div.panel-heading', [
-            m('h3.panel-title.list-link', {onclick: function(e){
-              // grab tutorial id and pass to read using variadic route
-              m.route('/read/' + tutorial.id)
-            }}, tutorial.title)
+            m('a[href=#/read/' + tutorial.id + '].panel-title.list-link', tutorial.title)
           ])
         ],
         m('div.panel-body', tutorial.content.children[0]));
