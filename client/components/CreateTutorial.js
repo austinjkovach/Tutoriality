@@ -84,7 +84,7 @@ var createTemplate = function(ctrl, options) {
               // m('legend', 'Tutorial Information'),
                 m('form', 'Title: ', { type: 'text' }, [
                   m('br'),
-                  m('input', {
+                  m('input.form-control', {
                     type: 'text',
                     placeholder: 'Enter Title',
                     style: 'width: 75%;',
@@ -95,7 +95,7 @@ var createTemplate = function(ctrl, options) {
                 ]),
                 m('form', 'Description: ', { type: 'text' }, [
                   m('br'),
-                  m('textarea', {
+                  m('textarea.form-control', {
                     type: 'text',
                     placeholder: 'Enter Description',
                     style: 'width: 75%;',
@@ -122,31 +122,37 @@ var stepHeader = function() {
 var makeSteps = function(ctrl) {
   return m('.steps', [
 //maps over objects in steps array and creates input fields for properties in objects
-  ctrl.tutorial.steps.map(function(step, idx){
-    return m('form', 'Step Title:', { type: 'text',  style: 'margin-right: 40%;' }, [
-            m('br'),
-            m('input', {
-              type: 'text',
-              placeholder: 'Give a short description of step',
-              style: 'width: 75%',
-              value : step.title,
-              onchange: function() { step.title = this.value }
-               }),
-            m('br'),
-            m('br'),
-            m('form', { type: 'text' }),
-            m('textarea.form-control', {
-              rows:'3',
-              type:'text',
-              placeholder:'Step it out!',
-              style: 'width:75%; height:175px ',
-              value : step.content,
-              onchange: function() { step.content = this.value }
-               }),
-            m('br'),
-           ])
-         })
-       ])
+    ctrl.tutorial.steps.map(function(step, idx){
+      return  m('.panel', [
+              m('.panel-header', [
+              m('form', 'Step Title:', { type: 'text',  style: 'margin-right: 40%;' }, [
+              m('i.trash.glyphicon.glyphicon-trash'),
+              m('br'),
+              m('.panel-body', [
+              m('input.form-control', {
+                type: 'text',
+                placeholder: 'Give a short description of step',
+                style: 'width: 75%',
+                value : step.title,
+                onchange: function() { step.title = this.value }
+                 }),
+              m('br'),
+              m('form', { type: 'text' }),
+              m('textarea.form-control', {
+                rows:'3',
+                type:'text',
+                placeholder:'Step it out!',
+                style: 'width:75%; height:175px ',
+                value : step.content,
+                onchange: function() { step.content = this.value }
+                 }),
+              m('br'),
+             ])
+            ])
+          ])
+        ])
+    })
+  ])
 }
 
 
