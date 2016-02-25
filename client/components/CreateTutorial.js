@@ -63,7 +63,7 @@ CreateTutorial.controller = function () {
 //Main Create view composed of all sub views in desired order of appearance
 CreateTutorial.view = function (ctrl, options) {
   //what is going to be included in the create view tutorial
-    var view = m('div', [
+    var view = m('.col-md-6.col-md-offset-3.col-sm-12', [
       createTemplate(ctrl),
       stepHeader(ctrl),
       makeSteps(ctrl),
@@ -166,6 +166,9 @@ var buttons = function(ctrl) {
           //calls the ctrl.save function which updates or creates, and then reroutes back to the main page
           onclick: function(e) { e.preventDefault(); ctrl.save(ctrl.tutorial); m.route('/'); }
         }, "Save"),
+        m("button.btn.btn.btn-danger.button-lrg[type='button']", {
+          onclick: function(e) {e.preventDefault(); m.route('/'); }
+        }, "Cancel"),
       ]),
       m('br'),
       m('br'),

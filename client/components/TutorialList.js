@@ -22,7 +22,7 @@ List.controller = function () {
 };
 
 List.view = function (ctrl, options) {
-  var view = m('.listView.col-md-6.col-offset-3.col-sm-12', [
+  var view = m('.listView.col-md-6.col-md-offset-3.col-sm-12', [
 
     m('div.page-header', [
       m('h1', 'Tutorial List')
