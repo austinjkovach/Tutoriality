@@ -36,6 +36,22 @@ div.btn {
 	/*width:22%;*/
 }
 
+.step-btns {
+  width: 100%;
+}
+
+button.add-step-btn {
+  width: 60%;
+}
+
+button.save-step-btn {
+  width: 20%;
+}
+
+button.cancel-step-btn {
+  width: 20%;
+}
+
 .content-steps {
   text-align:left;
   width: 90%;
