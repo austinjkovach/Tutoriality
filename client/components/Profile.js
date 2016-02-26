@@ -52,7 +52,7 @@ Profile.view = function (ctrl, options) {
         //m('div', editBtn(options, ctrl.tutorial)),
         //render my tutorials
         ctrl.tutorials.map(function(tutorial) {
-          return m('div.panel.panel-default', [
+          return m('div.panel.panel-default.profile-tutorials-container', [
             m('div', editBtn(tutorial)),
             m('button.btn', {onclick: function(e){
               e.preventDefault();

@@ -17,6 +17,10 @@
   /*color: #eee;*/
 }
 
+.panel-heading {
+  border-bottom: 3px solid #eee;
+}
+
 /* Specific styles for the list view page */
 .listView h1 {
   text-align: left;
@@ -91,3 +95,4 @@
   background: #178acc;
   border: none;
 }
+
