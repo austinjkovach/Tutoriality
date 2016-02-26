@@ -11,6 +11,7 @@ User.signIn = function() {
 	//.popup is what triggers popup that allows to sign into github
 	return OAuth.popup('github').then(function(res){
 		//when popup is successfully signed in, OAuthUser actually signs into the app
+    console.log("the res", res)
     return OAuthUser.signin(res)
 	}).then(function(user){
     return m.request({method : 'POST', url : '/api/users', data : user.data})
