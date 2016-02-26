@@ -7,7 +7,7 @@ module.exports = function(body) {
 		navSubView(),
 		Notification.isShown() ? notificationSubView() : null,
 		m('.container',[
-			m('.col-sm-12 .col-md-8 .col-md-offset-2',[
+			m('.col-sm-12 .col-md-6 .col-md-offset-3',[
 				body]),
 		]),
 	]);

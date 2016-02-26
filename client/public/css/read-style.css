@@ -12,6 +12,7 @@ img {
 
 .tutorial-header {
   text-align: left;
+  padding-bottom: 20px;
 }
 
 .tutorial-header > h2 {
@@ -51,8 +52,8 @@ button.save-step-btn {
 }
 
 .content-steps {
-
   border-top: 3px solid #eee;
+  border-bottom: 3px solid #eee;
 }
 
 h3 {
@@ -62,6 +63,7 @@ h3 {
 p.lead {
   margin-top: 20px;
 }
-.panel-body {
 
+.comments {
+  padding-top: 20px;
 }

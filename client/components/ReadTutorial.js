@@ -45,7 +45,6 @@ Read.view = function (ctrl, options) {
                 m('h2', ctrl.tutorial.title),
                 m('img.created-by-pic', {src: User.getPic()}),
                 m('h5.created-by', "Created by " + User.getName()),
-                m('p', ctrl.tutorial.description),
                 m('.auth-edit', [
                 User.confirmLoggedIn() && User.isUserMatch(ctrl.tutorial.created_by) ? [
                   m('div', editBtn(options, ctrl.tutorial))
@@ -53,6 +52,7 @@ Read.view = function (ctrl, options) {
              ])
         ]),
         m('.content-steps', [
+        m('p.lead', ctrl.tutorial.description),
           ctrl.tutorial.steps.map(function(list, index) {
             index = index+1;
             return m('div', {'aria-multiselectable': 'true'}, [
@@ -63,7 +63,8 @@ Read.view = function (ctrl, options) {
             ])
           })
         ]),
-        m('.comments',{style: {border: "1px solid red"}},[
+        m('.comments', [
+          m('p.lead.comments-heading', 'Comments'),
           ctrl.comments.map(function(comment){
             return m('.singleComment',[
               m('img.created-by-pic',{src: '#', width: '75', height: '75'}),
